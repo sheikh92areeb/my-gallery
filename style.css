@@ -1,0 +1,156 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+/* Color Variables */
+:root {
+    --primary-color: #1A1F71;
+    --accent-color: #00A8CC;
+    --secondary-color: #F5F5F5;
+    --text-color: #333333;
+    --highlight-color: #FFD700;
+}
+/* Similar Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Styles */
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+}
+h1 { 
+    font-size: 56px; 
+}
+h2 { 
+    font-size: 32px; 
+}
+p { 
+    font-size: 16px; 
+}
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: white;
+}
+/* Header Styles */
+header {
+    width: 100%;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo i {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+header .logo h1 {
+    font-size: 30px;
+}
+header .navbar ul li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+header .navbar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+header .navbar ul li:hover a {
+    color: var(--primary-color);
+}
+header .cat-btn button {
+    background: var(--primary-color);
+    border: 2px solid transparent;
+    padding: 5px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+header .cat-btn:hover button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+/* hero Styles */
+.hero {
+    width: 100%;
+    height: calc(100vh - 66px);
+    background: linear-gradient(240deg, rgba(0,0,0,0.8) , rgba(0,0,0,0.4)), url('img/bg-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.hero .heading-box {
+    width: 50%;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+.hero .heading-box h1 {
+    font-size: 40px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+.hero .heading-box h1 span {
+    font-size: 30px;
+}
+.hero .heading-box h2 {
+    color: var(--secondary-color);
+    font-size: 23px;
+    margin-bottom: 60px;
+}
+.hero .heading-box p {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+.hero .heading-box .cat-btn button {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.hero .heading-box .cat-btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+.hero .heading-box .cat-btn:hover button {
+    color: var(--primary-color);
+    border-color: transparent;
+}
+.hero .heading-box .cat-btn:hover button::before {
+    left: 0;
+}
