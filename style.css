@@ -60,16 +60,14 @@ button {
 }
 section {
     width: 100%;
-    height: calc(100vh - 66px);
 }
 .container {
-    padding: 0 60px;
+    padding: 0 60px 30px;
 }
 .section-heading {
     padding: 30px 0;
     display: flex;
     justify-content: center;
-
 }
 .section-heading h2 {
     width: fit-content;
@@ -121,6 +119,7 @@ section {
 .section-btn {
     text-align: center;
     padding: 30px 0 0 0;
+    /* margin-top: 30px; */
 }
 .section-btn button {
     background-color: var(--primary-color);
@@ -137,6 +136,7 @@ section {
 }
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
 }
 /* Header Styles */
 header {
@@ -146,6 +146,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid var(--secondary-color);
     padding: 10px 60px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -230,6 +231,7 @@ header .navbar ul li:hover a {
 #project .box {
     flex: 0 0 25%;
     padding: 0 10px;
+    margin-bottom: 40px;
 }
 #project .box .card {
     width: 100%;
@@ -268,4 +270,11 @@ header .navbar ul li:hover a {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border-color: var(--primary-color);
+}
+/* contect styles */
+.address-info {
+    flex: 0 0 40%;
+}
+.form-section {
+    flex: 0 0 60%;
 }
