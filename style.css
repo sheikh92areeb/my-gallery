@@ -15,6 +15,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Scrollbar Style */
+html {
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    width: 5px;
+}
+html::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--highlight-color);
+    border-radius: 10px;
+}
 /* General Styles */
 body {
     width: 100%;
@@ -42,92 +58,40 @@ button {
     background-color: var(--accent-color);
     color: white;
 }
-/* Header Styles */
-header {
-    width: 100%;
-    height: 66px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 60px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-header .logo {
-    display: flex;
-    align-items: center;
-}
-header .logo i {
-    font-size: 30px;
-    color: var(--primary-color);
-    margin-right: 15px;
-}
-header .logo h1 {
-    font-size: 30px;
-}
-header .navbar ul li {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 0 10px;
-    transition: all 0.3s ease-in-out;
-}
-header .navbar ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-header .navbar ul li:hover a {
-    color: var(--primary-color);
-}
-header .cat-btn button {
-    background: var(--primary-color);
-    border: 2px solid transparent;
-    padding: 5px 20px;
-    border-radius: 15px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-header .cat-btn:hover button {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-/* hero Styles */
-.hero {
+section {
     width: 100%;
     height: calc(100vh - 66px);
-    background: linear-gradient(240deg, rgba(0,0,0,0.8) , rgba(0,0,0,0.4)), url('img/bg-1.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
 }
-.hero .heading-box {
-    width: 50%;
-    margin-left: 60px;
-    margin-top: 60px;
+.container {
+    padding: 0 60px;
 }
-.hero .heading-box h1 {
-    font-size: 40px;
-    line-height: 1.5;
-    color: var(--secondary-color);
+.section-heading {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+
 }
-.hero .heading-box h1 span {
-    font-size: 30px;
+.section-heading h2 {
+    width: fit-content;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
 }
-.hero .heading-box h2 {
-    color: var(--secondary-color);
-    font-size: 23px;
-    margin-bottom: 60px;
+.section-heading h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--highlight-color);
 }
-.hero .heading-box p {
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-}
-.hero .heading-box .cat-btn button {
+.cat-btn button {
     background-color: transparent;
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
-    padding: 10px 25px;
+    padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -136,7 +100,7 @@ header .cat-btn:hover button {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
-.hero .heading-box .cat-btn button::before {
+.cat-btn button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -147,10 +111,161 @@ header .cat-btn:hover button {
     z-index: -1;
     transition: all 0.3s ease-in-out;
 }
-.hero .heading-box .cat-btn:hover button {
+.cat-btn:hover button {
     color: var(--primary-color);
     border-color: transparent;
 }
-.hero .heading-box .cat-btn:hover button::before {
+.cat-btn:hover button::before {
     left: 0;
+}
+.section-btn {
+    text-align: center;
+    padding: 30px 0 0 0;
+}
+.section-btn button {
+    background-color: var(--primary-color);
+    border: 2px solid transparent;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.section-btn button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.flex-container {
+    display: flex;
+}
+/* Header Styles */
+header {
+    width: 100%;
+    height: 66px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo i {
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin-right: 15px;
+}
+header .logo h1 {
+    font-size: 30px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+header .navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+header .navbar ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--highlight-color);
+    transition: all 0.3s ease-in-out;
+}
+header .navbar ul li:hover::before {
+    width: 100%;
+}
+header .navbar ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+header .navbar ul li:hover a {
+    color: var(--highlight-color);
+}
+/* hero Styles */
+#hero {
+    width: 100%;
+    height: calc(100vh - 66px);
+    background: linear-gradient(240deg, rgba(0,0,0,0.8) , rgba(0,0,0,0.4)), url('img/bg-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+#hero .heading-box {
+    width: 50%;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+#hero .heading-box h1 {
+    font-size: 48px;
+    line-height: 1;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+#hero .heading-box h1 span {
+    font-size: 20px;
+}
+#hero .heading-box h2 {
+    color: var(--secondary-color);
+    font-size: 23px;
+    margin-bottom: 60px;
+}
+#hero .heading-box p {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+/* project styles */
+#project .box {
+    flex: 0 0 25%;
+    padding: 0 10px;
+}
+#project .box .card {
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+#project .box .card:hover {
+    transform: scale(1.05);
+}
+#project .box .card .card-header img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+#project .box .card .card-body {
+    padding: 5px 15px;
+}
+#project .box .card .card-body h3 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+#project .box .card .card-body p {
+    margin-bottom: 10px;
+}
+#project .box .card .card-body button {
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#project .box .card .card-body button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
