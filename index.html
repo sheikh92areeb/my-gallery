@@ -3,251 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Areeb Sheikh Project Gallery | Project Showcase | Portfolio</title>
+    <!-- Meta Tag For SEO -->
+    <meta name="description" content="Project Gallery - Showcasing My Skills, Work Experience, and Portfolio.">
+    <meta name="keywords" content="Portfolio, Web Developer, Skills, Projects, Services">
+    <meta name="author" content="Your Name">
+    <!-- Site Title -->
+    <title>Project Gallery</title>
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="logo">
-            <i class="fa-regular fa-images"></i>
-            <h1>Project Gallery</h1>
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="cat-btn">
-            <button>Hire Me</button>
+        <div class="container h-100 flex justify-between align-center">
+            <div class="logo">
+                <a href="#home" class="flex align-center">
+                    <i class="fa-solid fa-images"></i>
+                    <h1>Project Gallery</h1>
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul class="list">
+                    <li class="list-items"><a href="#home" class="link">Home</a></li>
+                    <li class="list-items"><a href="#about" class="link">About</a></li>
+                    <li class="list-items"><a href="#services" class="link">Services</a></li>
+                    <li class="list-items"><a href="#portfolio" class="link">Portfolio</a></li>
+                    <li class="list-items"><a href="#contact" class="link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-toggle">
+                <button><i class="fa-solid fa-bars"></i></button>
+            </div>
         </div>
     </header>
-    <section id="hero">
-        <div class="heading-box">
-            <h1><span>Welcome to Areeb Sheikh</span><br> Project Gallery</h1>
-            <h2>Explore, Innovate, Create.</h2>
-            <p>
-                Explore my collection of web projects, showcasing innovative designs and powerful functionality.
-            </p>
-            <div class="cat-btn">
-                <button>View Projects</button>
-            </div>
-        </div>
-    </section>
-    <section id="project">
+
+    <!-- Hero Section -->
+    <section id="home">
         <div class="container">
-            <div class="section-heading">
-                <h2>my projects</h2>
-            </div>
-            <div class="section-content">
-                <div class="flex-container">
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="img/projects/project-01.png" alt="Project Image">
-                            </div>
-                            <div class="card-body">
-                                <h3>project name</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, ipsum.</p>
-                                <button>view project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-btn">
-                <button>View More</button>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="container">
-            <div class="section-heading">
-                <h2>contact us</h2>
-            </div>
-            <div class="section-content">
-                <div class="flex-container">
-                    <div class="address-info">
-                        <div class="address">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <h5>Karachi, Pakistan</h5>
-                        </div>
-                        <div class="phone">
-                            <i class="fa-solid fa-phone"></i>
-                            <h5>+92 347 2844259</h5>
-                            <h5>mareebsheikh92@gmail.com</h5>
-                        </div>
-                        <div class="icons-box">
-                            <h4>Follow ups</h4>
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-linkedin"></i>
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-github"></i>
-                        </div>
-                    </div>
-                    <div class="form-section">
-                        <p>Interested in working together? Drop me a message!</p>
-                        <form action="#">
-                            <div class="input-box">
-                                <input type="text">
-                                <input type="text">
-                            </div>
-                            <div class="input-box">
-                                <input type="text">
-                            </div>
-                            <div class="input-box">
-                                <textarea name="" id=""></textarea>
-                            </div>
-                            <div class="btn-box">
-                                <button>submit</button>
-                            </div>
-                        </form>
-                    </div>
+            <div class="intro-info">
+                <h1>Showcasing <i>Excellence</i> in Web Design & Development</h1>
+                <h2>Welcome to <i>Project Gallery</i></h2>
+                <span>Your Destination for Stunning Creative Websites</span>
+                <p>
+                    Explore my collection of web projects, showcasing innovative designs and powerful functionality.
+                </p>
+                <div class="cta-btn">
+                    <button><a href="">View Projects</a></button>
+                    <button><a href="">Hire Me</a></button>
                 </div>
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <div class="copyright">
-                <p>Designed by <span>Areeb Sheikh</span></p>
-            </div>
+
+  <!-- About Section -->
+  <!-- <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a passionate developer with expertise in HTML, CSS, JavaScript, PHP, and MySQL. I have over 2 years of experience creating innovative solutions for clients worldwide.</p>
+    </div>
+  </section> -->
+
+  <!-- Services Section -->
+  <!-- <section id="services" class="services">
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="service-cards">
+        <div class="service">
+          <h3>Web Design</h3>
+          <p>Creating attractive and user-friendly designs tailored to your needs.</p>
         </div>
-    </footer>
+        <div class="service">
+          <h3>Web Development</h3>
+          <p>Building scalable and dynamic web applications using modern technologies.</p>
+        </div>
+        <div class="service">
+          <h3>SEO Optimization</h3>
+          <p>Improving website rankings and increasing online visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Portfolio Section -->
+  <!-- <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>My Work</h2>
+      <div class="portfolio-gallery">
+        <div class="project">
+          <img src="img/projects/project-01.png" alt="Project 1">
+          <p>Project 1</p>
+        </div>
+        <div class="project">
+            <img src="img/projects/project-01.png" alt="Project 2">
+          <p>Project 2</p>
+        </div>
+        <div class="project">
+            <img src="img/projects/project-01.png" alt="Project 3">
+          <p>Project 3</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Contact Section -->
+  <!-- <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section> -->
+
+  <!-- Footer -->
+  <!-- <footer>
+    <p>© 2024 Project Gallery. All Rights Reserved.</p>
+  </footer> -->
+
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>
