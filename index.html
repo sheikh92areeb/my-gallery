@@ -15,76 +15,146 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container h-100 flex justify-between align-center">
-            <div class="logo">
-                <a href="#home" class="flex align-center">
-                    <i class="fa-solid fa-images"></i>
-                    <h1>Project Gallery</h1>
-                </a>
-            </div>
-            <nav class="navbar">
-                <ul class="list">
-                    <li class="list-items"><a href="#home" class="link">Home</a></li>
-                    <li class="list-items"><a href="#about" class="link">About</a></li>
-                    <li class="list-items"><a href="#services" class="link">Services</a></li>
-                    <li class="list-items"><a href="#portfolio" class="link">Portfolio</a></li>
-                    <li class="list-items"><a href="#contact" class="link">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="navbar-toggle">
-                <button><i class="fa-solid fa-bars"></i></button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home">
-        <div class="container">
-            <div class="intro-info">
-                <h1>Showcasing <i>Excellence</i> in Web Design & Development</h1>
-                <h2>Welcome to <i>Project Gallery</i></h2>
-                <span>Your Destination for Stunning Creative Websites</span>
-                <p>
-                    Explore my collection of web projects, showcasing innovative designs and powerful functionality.
-                </p>
-                <div class="cta-btn">
-                    <button><a href="">View Projects</a></button>
-                    <button><a href="">Hire Me</a></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  <!-- About Section -->
-  <!-- <section id="about" class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am a passionate developer with expertise in HTML, CSS, JavaScript, PHP, and MySQL. I have over 2 years of experience creating innovative solutions for clients worldwide.</p>
+  <!-- Header -->
+  <header>
+    <div class="container h-100 flex justify-between align-center">
+      <div class="logo">
+        <a href="#home" class="flex align-center">
+          <i class="fa-solid fa-images"></i>
+          <h1>Project Gallery</h1>
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul class="list">
+          <li class="list-items"><a href="#home" class="link">Home</a></li>
+          <li class="list-items"><a href="#about" class="link">About</a></li>
+          <li class="list-items"><a href="#services" class="link">Services</a></li>
+          <li class="list-items"><a href="#portfolio" class="link">Portfolio</a></li>
+          <li class="list-items"><a href="#contact" class="link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-toggle">
+        <button><i class="fa-solid fa-bars"></i></button>
+      </div>
     </div>
-  </section> -->
+  </header>
 
-  <!-- Services Section -->
-  <!-- <section id="services" class="services">
+  <!-- Hero Section -->
+  <section id="home">
     <div class="container">
-      <h2>My Services</h2>
-      <div class="service-cards">
-        <div class="service">
-          <h3>Web Design</h3>
-          <p>Creating attractive and user-friendly designs tailored to your needs.</p>
-        </div>
-        <div class="service">
-          <h3>Web Development</h3>
-          <p>Building scalable and dynamic web applications using modern technologies.</p>
-        </div>
-        <div class="service">
-          <h3>SEO Optimization</h3>
-          <p>Improving website rankings and increasing online visibility.</p>
+      <div class="intro-info">
+        <h1>Showcasing <i>Excellence</i> in Web Design & Development</h1>
+        <h2>Welcome to <i>Project Gallery</i></h2>
+        <span>Your Destination for Stunning Creative Websites</span>
+        <p>
+          Explore my collection of web projects, showcasing innovative designs and powerful functionality.
+        </p>
+        <div class="cta-btn">
+          <button><a href="">View Projects</a></button>
+          <button><a href="">Hire Me</a></button>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="section-heading">
+      <h2>About Me</h2>
+    </div>
+    <div class="container">  
+      <div class="row">
+        <div class="col-6">
+          <div class="about-img">
+            <img src="img/about-img.jpg" alt="About Image">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="about-info">
+            <h3><span>Hi I'm</span> Areeb Sheikh</h3>
+            <p>I am a passionate developer with expertise in HTML, CSS, JavaScript, PHP, and MySQL. I have over 2 years of experience creating innovative solutions for clients worldwide.</p>
+            <div class="info-list">
+              <li>
+                <i class="fa-solid fa-angles-right"></i>
+                <strong>Birthday:</strong>
+                <span>19th of May, 2003</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-angles-right"></i>
+                <strong>Age:</strong>
+                <span>21</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-angles-right"></i>
+                <strong>Email:</strong>
+                <span>mareebsheikh92@gmail.com</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-angles-right"></i>
+                <strong>Phone:</strong>
+                <span>+92 347 2844259</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-angles-right"></i>
+                <strong>Education:</strong>
+                <span>Master's in Islamic Studies</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-angles-right"></i>
+                <strong>City:</strong>
+                <span>Karachi, Pakistan</span>
+              </li>
+            </div>
+            <div class="hire-me">
+              <button><a href="">Hire Me</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="section-heading">
+      <h2>Services</h2>
+    </div>
+    <div class="container">
+      <div class="row justify-center">
+        <div class="col-4">
+          <div class="card border-primary text-center">
+            <div class="card-title">
+              <h3><i class="fa-solid fa-pen-ruler"></i> Web Design</h3>
+            </div>   
+            <div class="card-text">
+              <p>Creating attractive and user-friendly designs tailored to your needs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-primary text-center">
+            <div class="card-title">
+              <h3><i class="fa-solid fa-code"></i> Web Development</h3>
+            </div>   
+            <div class="card-text">
+              <p>Building scalable and dynamic web applications using modern technologies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-primary text-center">
+            <div class="card-title">
+              <h3><i class="fa-solid fa-chart-simple"></i> SEO Optimization</h3>
+            </div>   
+            <div class="card-text">
+              <p>Improving website rankings and increasing online visibility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Portfolio Section -->
   <!-- <section id="portfolio" class="portfolio">
