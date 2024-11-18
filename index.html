@@ -157,43 +157,139 @@
   </section>
 
   <!-- Portfolio Section -->
-  <!-- <section id="portfolio" class="portfolio">
+  <section id="portfolio" class="portfolio">
+    <div class="section-heading">
+      <h2>portfolio</h2>
+    </div>
     <div class="container">
-      <h2>My Work</h2>
-      <div class="portfolio-gallery">
-        <div class="project">
-          <img src="img/projects/project-01.png" alt="Project 1">
-          <p>Project 1</p>
+      <div class="row">
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">
+              <div class="project-img">
+                <img src="img/projects/project-01.png" alt="Project-01 image">
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="">Coffee Bliss</a></h3>
+              <p class="card-text">Coffee Bliss is a one-page responsive website designed for a coffee shop to showcase its menu, products, and services. Built using HTML, CSS, and JavaScript, it features a sleek dark theme, eye-catching hover effects, and a fully interactive layout.</p>
+              <div class="view-btn">
+                <a href="">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="project">
-            <img src="img/projects/project-01.png" alt="Project 2">
-          <p>Project 2</p>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">
+              <div class="project-img">
+                <img src="img/projects/project-02.png" alt="Project-02 image">
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="">Loft City</a></h3>
+              <p class="card-text">Loft City is a 4-page static website designed for a vacation rental company. It offers a user-friendly interface and detailed property information. Built with HTML and CSS, the site ensures responsive performance across all devices.</p>
+              <div class="view-btn">
+                <a href="">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="project">
-            <img src="img/projects/project-01.png" alt="Project 3">
-          <p>Project 3</p>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">
+              <div class="project-img">
+                <img src="img/projects/project-03.png" alt="Project-03 image">
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="">My Portfolio</a></h3>
+              <p class="card-text">My Portfolio is a fully responsive and dynamic site showcasing my skills and projects. Developed using HTML, CSS, JavaScript, and jQuery, it includes smooth animations, interactive transitions, and a style switcher with dark and light themes.</p>
+              <div class="view-btn">
+                <a href="">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section> -->
+    <div class="section-btn">
+      <button><a href="">View More</a></button>
+    </div>
+  </section>
 
   <!-- Contact Section -->
-  <!-- <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+  <section id="contact" class="contact">
+    <div class="section-heading">
+      <h2>contact me</h2>
     </div>
-  </section> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="contact-info">
+            <h3>Contact Details:</h3>
+            <ul>
+              <li><i class="fa-solid fa-envelope"></i> <a href="">mareebsheikh92@gmail.com</a></li>
+              <li><i class="fa-solid fa-phone"></i> <a href="">+92 347 2844259</a></li>
+              <li><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</li>
+            </ul>
+            <h3>Follow Ups:</h3>
+            <ul>
+              <li><a href=""><i class="fab fa-facebook"></i> Al Sheikh Areeb</a></li>
+              <li><a href=""><i class="fab fa-linkedin"></i> M Areeb Sheikh</a></li>
+              <li><a href=""><i class="fab fa-github"></i> sheikh92areeb</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="form-section">
+            <h3>Get in Touch with Me</h3>
+            <p>Have a question or want to discuss your project? Feel free to reach out using the contact form below. <br>
+            I’ll respond within 24 hours!</p>
+            <form action="contact.php" method="POST" class="contact-form">
+              <div class="row">
+                <div class="col-6">                  
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="subject">Subject:</label>
+                  <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <!-- <footer>
-    <p>© 2024 Project Gallery. All Rights Reserved.</p>
-  </footer> -->
+  <footer>
+    <div class="container h-100">
+      <div class="flex justify-between align-center h-100">
+        <p>Designed by Areeb Sheikh</p>
+        <p>© 2024 Project Gallery. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- <script src="script.js"></script> -->
 </body>

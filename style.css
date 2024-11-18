@@ -31,6 +31,7 @@
 
     /* Shadow */
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-lg: 0 6px 8px rgba(0, 0, 0, 0.4);
 
     /* Transition */
     --transition: all 0.3s ease-in-out;
@@ -69,6 +70,7 @@ body {
 }  
 section {
     width: 100%;
+    padding-bottom: 40px;
 }
 .section-heading {
     padding: 60px 0 40px 0;
@@ -91,8 +93,21 @@ section {
     height: 3px;
     background-color: var(--secondary-color);
 }
-section {
-    padding-bottom: 40px;
+.section-btn {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+.section-btn button a {
+    background-color: var(--primary-color);
+    color: var(--background-color-2);
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-xl);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+.section-btn button:hover a {
+    background-color: #0861fa;
+    letter-spacing: 1px;
 }
 img {
     max-width: 100%;
@@ -148,6 +163,7 @@ ul, ol {
     display: flex; 
     flex-wrap: wrap;
 }
+.col-8 { flex: 0 0 66.66%; }
 .col-6 { flex: 0 0 50%; }
 .col-4 { flex: 0 0 33.33%; }
 .col-3 { flex: 0 0 25%; }
@@ -174,7 +190,6 @@ ul, ol {
 h1 { font-size: var(--font-size-xl); }
   
 /* Components */
-
 .list li {
     display: inline-block;
 }
@@ -213,7 +228,7 @@ h1 { font-size: var(--font-size-xl); }
     transition: var(--transition);
 }
 .card:hover {
-    transform: scale(1.02);
+    box-shadow: var(--box-shadow-lg);
 }
 .card img {
     border-radius: var(--border-radius);
@@ -400,6 +415,93 @@ header .logo a {
     color: var(--background-color-2);
 }
 
+/* Portfolio Styles */
+.portfolio .col-4 {
+    padding: 0 var(--spacing-md);
+}
+.portfolio .card {
+    padding: 0;
+}
+.portfolio .card .card-header {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid black;
+}
+.portfolio .card .card-header .project-img {
+    width: 100%;
+    height: 100%;
+}
+.portfolio .card .card-header .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0 0 ;
+}
+.portfolio .card .card-body {
+    padding: var(--spacing-md);
+}
+.portfolio .card .card-body .card-title a{
+    color: var(--primary-color);
+}
+.portfolio .card .card-body .card-text {
+    font-size: var(--font-size-sm);
+}
+.portfolio .card .card-body .view-btn {
+    margin-top: var(--spacing-md);
+}
+.portfolio .card .card-body .view-btn a {
+    display: block;
+    width: fit-content;
+    color: var(--primary-color);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+.portfolio .card .card-body .view-btn a:hover {
+    color: var(--background-color-2);
+    background-color: var(--primary-color);
+}
+
+/* Contact Styles */
+.contact {
+    background-color: var(--background-color-2);
+}
+.contact .container > .row {
+    border: 1px solid black;
+}
+.contact i,
+.contact h3 {
+    color: var(--primary-color);
+}
+.contact-info {
+    height: 100%;
+    padding: var(--spacing-lg);
+}
+.form-section {
+    height: 100%;
+    padding: var(--spacing-lg);
+    background-color: pink;
+}
+.contact-info li {
+    font-size: var(--font-size-sm);
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+.contact p {
+    font-size: var(--font-size-sm);
+}
+
+
+/* Footer Styles */ 
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: var(--background-color-2);
+}
+
 /* Media Queries */
 @media (max-width: 1024px) {
     .intro-info {
@@ -413,6 +515,7 @@ header .logo a {
     }
 }
 @media (max-width: 768px) {
+    .col-8,
     .col-6 {
         flex: 0 0 100%;
     }
