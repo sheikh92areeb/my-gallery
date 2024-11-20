@@ -377,7 +377,8 @@ header .logo a {
     margin-top: var(--spacing-lg);
     padding-left: var(--spacing-md);
 }
-.about .about-info .hire-me button a {
+.about .about-info .hire-me button a,
+.contact-form button {
     display: block;
     color: var(--primary-color);
     padding: var(--spacing-sm) var(--spacing-md);
@@ -385,7 +386,8 @@ header .logo a {
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
-.about .about-info .hire-me button:hover a {
+.about .about-info .hire-me button:hover a,
+.contact-form button:hover {
     background-color: var(--primary-color);
     color: var(--background-color-2);
 }
@@ -468,12 +470,16 @@ header .logo a {
 .contact {
     background-color: var(--background-color-2);
 }
-.contact .container > .row {
-    border: 1px solid black;
-}
 .contact i,
 .contact h3 {
     color: var(--primary-color);
+}
+.contact h3 {
+    margin-bottom: var(--spacing-lg);
+}
+.contact ul,
+.contact p {
+    margin-bottom: var(--spacing-xl);
 }
 .contact-info {
     height: 100%;
@@ -482,7 +488,6 @@ header .logo a {
 .form-section {
     height: 100%;
     padding: var(--spacing-lg);
-    background-color: pink;
 }
 .contact-info li {
     font-size: var(--font-size-sm);
@@ -491,6 +496,28 @@ header .logo a {
 }
 .contact p {
     font-size: var(--font-size-sm);
+}
+.contact-form .form-group {
+    margin-bottom: var(--spacing-sm);
+}
+.contact-form .form-group label {
+    margin: 0;
+    font-size: var(--font-size-sm);
+}
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    background-color: var(--background-color-1);
+    padding: var(--spacing-sm) var(--spacing-sm);
+    border: 1px solid var(--text-color);
+    outline: none;
+    resize: none;
+}
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus,
+.contact-form .form-group input:valid,
+.contact-form .form-group textarea:valid {
+    border-color: var(--primary-color);
 }
 
 
