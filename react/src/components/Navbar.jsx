@@ -1,22 +1,21 @@
 import React from 'react'
-import logo from '../assets/logo-1.png'
+import logo from '../assets/logo.png'
 
 function Navbar() {
   return (
-    <nav className='bg-gray-300 flex gap-15 items-center justify-between px-25 py-3 shadow-md sticky top-0'>
-        <div className="left flex gap-15 items-center">
-            <div className="logo cursor-pointer">
-                <img src={logo} alt="logo" className='w-50' />
-            </div>
-            <ul className='flex gap-4'>
-                <li className='text-gray-600 text-lg font-medium hover:text-red-600 border-b-2 border-b-transparent hover:border-b-red-600 cursor-pointer'>Home</li>
-                <li className='text-gray-600 text-lg font-medium hover:text-red-600 border-b-2 border-b-transparent hover:border-b-red-600 cursor-pointer'>Projects</li>
-                <li className='text-gray-600 text-lg font-medium hover:text-red-600 border-b-2 border-b-transparent hover:border-b-red-600 cursor-pointer'>Who I am</li>
-                <li className='text-gray-600 text-lg font-medium hover:text-red-600 border-b-2 border-b-transparent hover:border-b-red-600 cursor-pointer'>Contact Me</li>
-            </ul>
+    <nav className='w-[80%] bg-white/80 fixed top-5 left-[50%] translate-x-[-50%] h-[10vh] rounded-full shadow-lg flex justify-between items-center px-5'>        
+        <div className="logo cursor-pointer flex gap-2 items-center">   
+            <img src={logo} alt="logo" className='w-8' />
+            <h1 className='text-2xl font-medium text-[#457ec3]'>Areeb Sheikh</h1>
         </div>
+        <ul className='flex gap-4'>
+            <li className='text-gray-800 text-lg font-medium hover:text-[#457ec3] border-b-2 border-b-transparent hover:border-b-[#457ec3] transition-all duration-300 cursor-pointer'>Home</li>
+            <li className='text-gray-800 text-lg font-medium hover:text-[#457ec3] border-b-2 border-b-transparent hover:border-b-[#457ec3] transition-all duration-300 cursor-pointer'>Projects</li>
+            <li className='text-gray-800 text-lg font-medium hover:text-[#457ec3] border-b-2 border-b-transparent hover:border-b-[#457ec3] transition-all duration-300 cursor-pointer'>Who I am</li>
+            <li className='text-gray-800 text-lg font-medium hover:text-[#457ec3] border-b-2 border-b-transparent hover:border-b-[#457ec3] transition-all duration-300 cursor-pointer'>Contact Me</li>
+        </ul>        
         <div className="right">
-            <button className='border border-red-600 bg-red-600 text-sm hover:tracking-[0.4px] cursor-pointer text-white px-4 py-1 rounded-full'>Hire me</button>    
+            <button className='border border-[#457ec3] bg-[#457ec3] hover:bg-[#457ec3]/80 text-sm  cursor-pointer text-white px-4 py-1 rounded-full'>Hire me</button>    
         </div>
     </nav>
   )
