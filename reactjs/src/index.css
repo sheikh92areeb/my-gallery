@@ -1,7 +1,47 @@
 @import "tailwindcss";
 
-
-/* ---------- BASICS ---------- */
+/* _______________ BASE _______________ */
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 5px;
+}
+html::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: #4a5565;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #d1d5dc;
+  border-radius: 30px;
+}
 body {
-  @apply bg-gray-100
+  background-color: #f3f4f6;  
+}
+
+/* _______________ UTILITIES _______________ */
+.container {
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto; /* mx-auto */
+}
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem; /* lg:px-8 */
+    padding-right: 2rem; /* lg:px-8 */
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 72rem; /* xl:max-w-6xl */
+  }
+}
+.section {
+  padding-top: 5rem; /* pt-20 */
+}
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 8rem; /* lg:pt-32 */
+  }
 }
