@@ -1,9 +1,10 @@
+import Title from "../components/Title"
 
 const Projects = () => {
   return (
-    <div>
-        Project Page
-    </div>
+    <>
+      <Title  title="My Projects" />
+    </>
   )
 }
 
