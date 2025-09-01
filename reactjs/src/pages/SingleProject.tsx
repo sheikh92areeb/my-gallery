@@ -1,8 +1,7 @@
 import { useParams, Link } from "react-router";
-import type { Project } from "../data/projects";
 import { motion } from "framer-motion";
 import ImageGallery from "../components/ImageGallery";
-import { useProjects } from "../context/ProjectContext";
+import { useProjects, type Project } from "../context/ProjectContext";
 
 const SingleProject = () => {
   const { projects, loading, error } = useProjects();  

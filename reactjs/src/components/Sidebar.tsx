@@ -1,10 +1,6 @@
 import type { FC } from "react";
 import { motion } from "framer-motion";
-
-type Category = {
-  id: string;
-  categoryName: string;
-};
+import type { Category } from "../context/ProjectContext";
 
 interface SidebarProps {
   categories: Category[];

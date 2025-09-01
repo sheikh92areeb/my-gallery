@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, type FC, type ReactNode } from "react";
 
-type Category = {
+export type Category = {
   id: string;
   categoryName: string;
 };
@@ -10,7 +10,7 @@ type Links = {
     live: string;
 }
 
-type Project = {
+export type Project = {
   id: string;
   title: string;
   short_description: string;

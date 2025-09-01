@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import type { Project } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import type { Project } from "../context/ProjectContext";
 
 interface ProjectsListProps {
   projects: Project[];
