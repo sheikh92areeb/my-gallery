@@ -1,5 +1,6 @@
 import { FaProjectDiagram, FaSmile, FaCode, FaClock } from "react-icons/fa";
 import StateCard from "./StateCard";
+import { useProjects } from "../context/ProjectContext";
 
 const countYears = (year: number): number => {
     const currentYear = new Date().getFullYear();
@@ -7,8 +8,10 @@ const countYears = (year: number): number => {
 }
 
 const States = () => {
+    const { projects} = useProjects();  
+
     const stats = [
-        { label: "Projects Done", value: 120, suffix: "+", icon: <FaProjectDiagram /> },
+        { label: "Projects Done", value: projects.length, suffix: "+", icon: <FaProjectDiagram /> },
         { label: "Years of Experience", value: countYears(2022), suffix: "+", icon: <FaClock /> },
         { label: "Happy Clients", value: 50, suffix: "+", icon: <FaSmile /> },
         { label: "Pre-built Components", value: 200, suffix: "+", icon: <FaCode /> },

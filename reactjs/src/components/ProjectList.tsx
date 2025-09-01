@@ -11,22 +11,17 @@ interface ProjectsListProps {
   itemsPerPage?: number;
 }
 
-const ProjectList: FC<ProjectsListProps> = ({
-  projects,
-  limit,
-  filterByCategory,
-  itemsPerPage = 6,
-}) => {
+const ProjectList: FC<ProjectsListProps> = ({projects,limit,filterByCategory,itemsPerPage = 6,}) => {
+
   const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredProjects = filterByCategory
-    ? projects.filter((p) => p.category.toLowerCase() === filterByCategory)
-    : projects;
+  const filteredProjects = !limit && filterByCategory ? projects.filter((p) => p.category === filterByCategory) : projects;
 
   const displayedProjects = limit
     ? filteredProjects.slice(-limit) // latest projects for home
     : filteredProjects;
 
+    console.log(filteredProjects)
   // Pagination logic
   const totalPages = Math.ceil(displayedProjects.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;

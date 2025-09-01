@@ -1,4 +1,4 @@
-import { useState, type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import { motion } from "framer-motion";
 
 interface ImageGalleryProps {
@@ -7,6 +7,17 @@ interface ImageGalleryProps {
 
 const ImageGallery: FC<ImageGalleryProps> = ({ images }) => {
   const [selected, setSelected] = useState(0);
+
+  // Auto-slide every 10 seconds
+  useEffect(() => {
+    if (!images || images.length === 0) return;
+
+    const interval = setInterval(() => {
+      setSelected((prev) => (prev + 1) % images.length);
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(interval); // cleanup
+  }, [images]);
 
   return (
     <div className="flex gap-4 mb-5">

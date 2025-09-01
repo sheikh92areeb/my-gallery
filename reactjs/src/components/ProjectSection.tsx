@@ -1,22 +1,22 @@
 import { Link } from "react-router";
 import ProjectList from "./ProjectList";
 import { useState, type FC } from "react";
-import { type Project } from "../data/projects";
 import Sidebar from "./Sidebar";
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
+import { useProjects } from "../context/ProjectContext";
 
-interface ProjectsSectionProps {
-  projects: Project[];
+interface ProjectsSectionProps {  
   limit?: number;
   title?: string;
 }
 
-const ProjectSection: FC<ProjectsSectionProps> = ({ projects, limit, title }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [showSidebar, setShowSidebar] = useState(false);
+const ProjectSection: FC<ProjectsSectionProps> = ({ limit, title }) => {
+  const { categories, projects, loading, error } = useProjects();  
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error: {error}</p>
 
-  // Extract unique categories
-  const categories = [...new Set(projects.map((p) => p.category.toLowerCase()))];
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(categories[0].categoryName);
 
   return (
     <section className="bg-white py-8">

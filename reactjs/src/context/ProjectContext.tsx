@@ -5,6 +5,11 @@ type Category = {
   categoryName: string;
 };
 
+type Links = {
+    github: string;
+    live: string;
+}
+
 type Project = {
   id: string;
   title: string;
@@ -15,6 +20,7 @@ type Project = {
   features: string[];
   techStack: string[];
   images: string[];
+  links: Links;
 };
 
 type ProjectContextType = {

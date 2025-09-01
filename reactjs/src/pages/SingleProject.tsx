@@ -1,10 +1,14 @@
 import { useParams, Link } from "react-router";
-import projects from "../data/projects";
 import type { Project } from "../data/projects";
 import { motion } from "framer-motion";
 import ImageGallery from "../components/ImageGallery";
+import { useProjects } from "../context/ProjectContext";
 
 const SingleProject = () => {
+  const { projects, loading, error } = useProjects();  
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error: {error}</p>
+
   const { id } = useParams<{ id: string }>();
   const project: Project | undefined = projects.find((p) => p.id === id);
 

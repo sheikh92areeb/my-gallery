@@ -1,8 +1,13 @@
 import type { FC } from "react";
 import { motion } from "framer-motion";
 
+type Category = {
+  id: string;
+  categoryName: string;
+};
+
 interface SidebarProps {
-  categories: string[];
+  categories: Category[];
   selected: string | null;
   showSidebar: boolean;
   onSelect: (category: string | null) => void;
@@ -17,26 +22,16 @@ const Sidebar: FC<SidebarProps> = ({ categories, selected, showSidebar, onSelect
       transition={{ duration: 0.3 }}
     >
       <h3 className="text-blue-500 text-xl font-bold mb-5">Categories</h3>
-      <ul className="space-y-2">
-        <li>
-          <button
-            className={`block w-full text-left p-2 rounded-md ${
-              selected === null ? "bg-blue-500 text-white font-semibold" : "hover:bg-blue-100"
-            }`}
-            onClick={() => onSelect(null)}
-          >
-            All ({categories.length})
-          </button>
-        </li>
-        {categories.map((cat) => (
-          <li key={cat}>
+      <ul className="space-y-2">        
+        {categories.map(({ id, categoryName }) => (
+          <li key={id}>
             <button
               className={`block w-full text-left p-2 rounded-md ${
-                selected === cat ? "bg-blue-500 text-white font-semibold" : "hover:bg-blue-100"
+                selected === categoryName ? "bg-blue-500 text-white font-semibold" : "hover:bg-blue-100"
               }`}
-              onClick={() => onSelect(cat)}
+              onClick={() => onSelect(categoryName)}
             >
-              {cat.toUpperCase()}
+              {categoryName.toUpperCase()}
             </button>
           </li>
         ))}
