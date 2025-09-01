@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, type FC, type ReactElement } from "react";
 
-
 interface StateCardProps {
     label: string;
     value: number;
@@ -9,16 +8,13 @@ interface StateCardProps {
     icon: ReactElement;
 }
 
-
 const StateCard: FC<StateCardProps> = ({ label, value, suffix, icon }) => {
     const [count, setCount] = useState(0);
-
 
     useEffect(() => {
         let start = 0;
         const end = value;
         if (start === end) return;
-
 
         let incrementTime = 20;
         let timer = setInterval(() => {
@@ -27,10 +23,8 @@ const StateCard: FC<StateCardProps> = ({ label, value, suffix, icon }) => {
             if (start === end) clearInterval(timer);
         }, incrementTime);
 
-
         return () => clearInterval(timer);
     }, [value]);
-
 
     return (
         <motion.div

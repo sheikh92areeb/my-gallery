@@ -1,7 +1,7 @@
 import type { FC } from "react";
-import type { Project } from "../data/projects";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import type { Project } from "../context/ProjectContext";
 
 const ProjectCard: FC<{ project: Project }> = ({ project }) => {
   return (
