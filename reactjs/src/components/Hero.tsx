@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <div 
       className="relative w-full h-[80vh] bg-center bg-cover bg-no-repeat" 
-      style={{ backgroundImage: "url('/src/assets/hero.jpg')" }}
+      style={{ backgroundImage: "url('/hero.jpg')" }}
     >
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/80"></div>
